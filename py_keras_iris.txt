@@ -1,5 +1,6 @@
 """
 Before Python, you should run the following scripts in R .
+(file : r_iris_save.txt)
 
 data(iris)
 names(iris) = c("SL","SW","PL","PW","SP")
