@@ -2,7 +2,7 @@ install.packages("HSAUR2")
 library(HSAUR2)
 data(heptathlon)
 head(heptathlon)   # 결과 생략 
-write.csv(heptathlon, file="c:/data/mva/heptathlon.csv")
+write.csv(heptathlon, file="c:/data/pydata/heptathlon.csv")
 heptathlon$hurdles = max(heptathlon$hurdles) - heptathlon$hurdles
 heptathlon$run200m = max(heptathlon$run200m) - heptathlon$run200m
 heptathlon$run800m = max(heptathlon$run800m) - heptathlon$run800m
