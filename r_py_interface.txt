@@ -2,7 +2,7 @@
 library(reticulate)
 py_install(packages="pandas", "scikit-learn")
 # Ex-1
-source_python("c:/rpy2_pgm/rpy_example.py")
+source_python("c:/rpy2_pgm/py_read.txt")
 flights <- read_flights("c:/data/pydata/flights.csv")
 library(ggplot2)
 ggplot(flights, aes(carrier, arr_delay)) + geom_point() + geom_jitter()
