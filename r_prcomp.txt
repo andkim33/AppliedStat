@@ -1,0 +1,16 @@
+install.packages("HSAUR2")
+library(HSAUR2)
+data(heptathlon)
+head(heptathlon)   # 결과 생략 
+write.csv(heptathlon, file="c:/data/mva/heptathlon.csv")
+heptathlon$hurdles = max(heptathlon$hurdles) - heptathlon$hurdles
+heptathlon$run200m = max(heptathlon$run200m) - heptathlon$run200m
+heptathlon$run800m = max(heptathlon$run800m) - heptathlon$run800m
+
+hep_data = heptathlon[, -8]
+# Principal component analysis using prcomp (using SVD)
+hep_pca =  prcomp(hep_data, scale=TRUE)
+help(‘prcomp’)
+summary(hep_pca2)  # 결과 생략 
+eig_val = hep_pca$sdev^2
+cumsum(eig_val)
